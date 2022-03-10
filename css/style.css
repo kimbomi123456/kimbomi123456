@@ -554,7 +554,7 @@ transform: translateX(-50%);
 }
 
 .section02 .bg {
-  background-image:url(http://enejwlwlq.dothome.co.kr/img/wooalong_l.png);  background-repeat:no-repeat;
+  background-image:url(/img/wooalong_l.png);  background-repeat:no-repeat;
   background-size: cover;
   position: absolute;
   top: 0;
@@ -564,7 +564,7 @@ transform: translateX(-50%);
 }
 
 .section03 .bg {
-  background-image:url(http://enejwlwlq.dothome.co.kr/img/aesop_bg.jpg);  background-repeat:no-repeat;
+  background-image:url(/img/aesop_bg.jpg);  background-repeat:no-repeat;
   background-position: center;
   background-size: cover;
   position: absolute;
@@ -575,7 +575,7 @@ transform: translateX(-50%);
 }
 
 .section04 .bg {
-  background-image:url(http://enejwlwlq.dothome.co.kr/img/t2.jpg);
+  background-image:url(/img/t2.jpg);
   background-repeat:no-repeat;
   background-position: center;
   background-size: cover;
@@ -587,7 +587,7 @@ transform: translateX(-50%);
 }
 
 .section05 .bg {
-  background-image:url(http://enejwlwlq.dothome.co.kr/img/fila_bg.jpg); background-repeat:no-repeat;
+  background-image:url(/img/fila_bg.jpg); background-repeat:no-repeat;
   background-position: center;
   background-size: cover;
   position: absolute;
@@ -598,7 +598,7 @@ transform: translateX(-50%);
 }
 
 .section06 .bg {
-  background-image:url(http://enejwlwlq.dothome.co.kr/img/keds_bg.jpg); background-repeat:no-repeat;
+  background-image:url(/img/keds_bg.jpg); background-repeat:no-repeat;
   background-position: center;
   background-size: cover;
   position: absolute;

@@ -1,7 +1,7 @@
 $(function () {
   var main_vis = new Swiper(".main_vis .mySwiper", {
     speed:800,
-   effect:'fade',
+   effect:"fade",
     autoplay: {
       delay: 2500,
       disableOnInteraction: false,
@@ -89,7 +89,6 @@ $(function () {
   /*tab menu area*/
   $(".tab> ul> li").click(function () {
     idx = $(this).index() + 1;
-    /*console.log(idxhh);*/
     $(".con div").removeClass("on");
     $("#cont0" + idx).addClass("on");
 
@@ -97,7 +96,7 @@ $(function () {
     $(this).addClass("on");
   });
 
- var awards_tab = new Swiper(".awards_tab .mySwiper", {
+  var awards_tab = new Swiper(".awards_tab .mySwiper", {
     slidesPerView: 1.5,
         spaceBetween: 30,
         pagination: {
@@ -135,16 +134,17 @@ $(function () {
   });
 
   /*우측 아코디언 메뉴*/
-  $(".menu_li .ctg_name").click(function () {
-    var ctg_h = $(this).parent().find("ul").outerHeight();
+  $(".list_items .ctg_name").click(function(){
+    var ctgHeught = $(this).parent().find("ul").outerHeight();
 
-    if ($(this).hasClass("opentab")) {
+    if ($(this).hasClass("opentab")){
       $(this).removeClass("opentab");
-      $(this).parent().find("div").stop().animate({ height: "0" });
-    } else {
-      $(this).addClass("opentab");
-      $(this).parent().find("div").stop().animate({ height: ctg_h });
-    }
+      $(this).parent().find("div").stop().animate({ height: "0" });}
+      else{
+        $(this).addClass("opentab");
+        $(".sub_menu").stop().animate({ height: "0" });
+        $(this).parent().find("div").stop().animate({ height : ctgHeught });
+      }
   });
 
   $(".bd_item .item_tit").click(function () {
@@ -170,40 +170,37 @@ $(function () {
   });
 
   $(window).scroll(function () {
-    omom = $(window).scrollTop();
-    off_top = $(".content").offset().top;
-    if (omom >= off_top) {
+    scrTop = $(window).scrollTop();
+    contentAreaTop = $(".content").offset().top;
+    if (scrTop >= contentAreaTop) {
       $(".top_btn").addClass("om");
     } else {
       $(".top_btn").removeClass("om");
     }
   });
 
-
   /*about fila*/
-  $('.awards_tab .swiper .swiper-slide').click(function(){
+  $(".awards_tab .swiper .swiper-slide").click(function(){
     var awd_idx = $(this).index() + 1;
     console.log(awd_idx);
-    $('div[class^=txt0]').removeClass('on');
-    $('.txt0' + awd_idx).addClass('on'); 
+    $("div[class^=txt0]").removeClass("on");
+    $(".txt0" + awd_idx).addClass("on"); 
   });
-
 
   var controller = new ScrollMagic.Controller({
     globalSceneOptions: {
-      triggerHook: 'onLeave',
+      triggerHook: "onLeave",
       duration: "200%"
     }
   });
 
-  var event_txt = TweenMax.to('.events .space_tit', 0.3, {y: '0%'});
+  var event_txt = TweenMax.to(".events .space_tit", 0.3, {y: "0%"});
   var scene01 = new ScrollMagic.Scene({ 
     triggerElement: ".events",
     offset:-600,
     })
     .setTween(event_txt)
     .addTo(controller)
-
 
 
 });

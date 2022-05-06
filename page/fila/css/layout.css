@@ -377,7 +377,7 @@ header .header .hd_icon #menu_btn .btn_span:last-child {
 #right_menu .menu_inner_wrap {padding: 2%; border-bottom: 1px solid #ddd; width: 100%;}
 #right_menu .menu_inner_wrap .main_menu_list .list_items{width: 100%;}
 #right_menu .menu_inner_wrap .main_menu_list .list_items .ctg_name {position: relative; display: block; width: 100%; line-height: 30px; font-size: 15px;}
-#right_menu .menu_inner_wrap .main_menu_list .list_items .ctg_name.opentab{border-bottom: 1px solid rgb(221, 221, 221); }
+#right_menu .menu_inner_wrap .main_menu_list .list_items .ctg_name.opentab{width:100%;}
 #right_menu .menu_inner_wrap .main_menu_list .list_items .ctg_name::before { content: ""; position: absolute;  display: block; position: absolute; right: 0; height: 2px; width: 20px;}
 #right_menu .menu_inner_wrap .main_menu_list .list_items .ctg_name::after {  content: ""; position: absolute; right: 0px; color: #ddd; bottom: 40%; height: 7px; width: 7px; transform: rotate(45deg) scale(0.8); 
   border-style: solid; border-image: initial; border-width: 2px 2px 0px 0px;}

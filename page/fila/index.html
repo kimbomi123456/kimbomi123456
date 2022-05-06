@@ -5,31 +5,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FILA</title>
-
-  <!-- css-->
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/main.css">
-
-  <!-- js-->
-  <script src="js/jquery-3.6.0.min.js"></script>
-  <script src="js/index.js"></script>
-
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
   <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
   <!-- 폰트어썸 -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
     integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/f8a0a95034.js" crossorigin="anonymous"></script>
 
+  <!-- font  -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
-    rel="stylesheet">
+  <!-- js-->
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
   <!-- 트윈맥스 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
@@ -41,6 +29,12 @@
   <!--gsap-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+  <!-- css-->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <script src="js/index.js"></script>
 </head>
 
 <body>
@@ -74,21 +68,16 @@
     <div class="info">
       <p>로그인을 해주세요.</p>
     </div>
-
     <div class="btn_box_txt">
       <p>로그인/회원가입 하고,<br /> 회원 전용 혜택 확인하기</p>
       <span>바로가기</span>
     </div>
-
-    <div class="menu">
-      <ul class="menu_ul">
-        <li class="menu_li">
-          <a href="javascript:void(0);" class="ctg_name">
-            <p>MEN</p>
-            <span class="icon"></span>
-          </a>
+    <div class="menu_inner_wrap">
+      <ul class="main_menu_list">
+        <li class="list_items">
+          <a href="javascript:void(0);" class="ctg_name">MEN<span class="icon"></span></a>
           <div class="sub_menu">
-            <ul>
+            <ul class="menu_list_wrap">
               <li>언더웨어</li>
               <li>전체보기</li>
               <li>온라인단독</li>
@@ -102,13 +91,10 @@
           </div>
         </li>
 
-        <li class="menu_li">
-          <a href="javascript:void(0);" class="ctg_name">
-            <p>WOMEN</p>
-            <span class="icon"></span>
-          </a>
+        <li class="list_items">
+          <a href="javascript:void(0);" class="ctg_name">WOMEN<span class="icon"></span></a>
           <div class="sub_menu">
-            <ul>
+            <ul class="menu_list_wrap">
               <li>언더웨어</li>
               <li>전체보기</li>
               <li>온라인단독</li>
@@ -122,13 +108,10 @@
           </div>
         </li>
 
-        <li class="menu_li">
-          <a href="javascript:void(0);" class="ctg_name">
-            <p>사이즈 찾기</p>
-            <span class="icon"></span>
-          </a>
+        <li class="list_items">
+          <a href="javascript:void(0);" class="ctg_name">사이즈 찾기<span class="icon"></span></a>
           <div class="sub_menu">
-            <ul>
+            <ul class="menu_list_wrap">
               <li>언더웨어</li>
               <li>전체보기</li>
               <li>온라인단독</li>
@@ -142,13 +125,10 @@
           </div>
         </li>
 
-        <li class="menu_li">
-          <a href="javascript:void(0);" class="ctg_name">
-            <p>NEW</p>
-            <span class="icon"></span>
-          </a>
+        <li class="list_items">
+          <a href="javascript:void(0);" class="ctg_name">NEW<span class="icon"></span></a>
           <div class="sub_menu">
-            <ul>
+            <ul class="menu_list_wrap">
               <li>언더웨어</li>
               <li>전체보기</li>
               <li>온라인단독</li>
@@ -162,13 +142,10 @@
           </div>
         </li>
 
-        <li class="menu_li">
-          <a href="javascript:void(0);" class="ctg_name">
-            <p>BEST</p>
-            <span class="icon"></span>
-          </a>
+        <li class="list_items">
+          <a href="javascript:void(0);" class="ctg_name">BEST<span class="icon"></span></a>
           <div class="sub_menu">
-            <ul>
+            <ul class="menu_list_wrap">
               <li>언더웨어</li>
               <li>전체보기</li>
               <li>온라인단독</li>
@@ -182,13 +159,10 @@
           </div>
         </li>
 
-        <li class="menu_li">
-          <a href="javascript:void(0);" class="ctg_name">
-            <p>EXCLUSIVE</p>
-            <span class="icon"></span>
-          </a>
+        <li class="list_items">
+          <a href="javascript:void(0);" class="ctg_name">EXCLUSIVE<span class="icon"></span></a>
           <div class="sub_menu">
-            <ul>
+            <ul class="menu_list_wrap">
               <li>언더웨어</li>
               <li>전체보기</li>
               <li>온라인단독</li>
@@ -202,13 +176,10 @@
           </div>
 
 
-        <li class="menu_li">
-          <a href="javascript:void(0);" class="ctg_name">
-            <p>COLLECTION</p>
-            <span class="icon"></span>
-          </a>
+        <li class="list_items">
+          <a href="javascript:void(0);" class="ctg_name">COLLECTION<span class="icon"></span></a>
           <div class="sub_menu">
-            <ul>
+            <ul class="menu_list_wrap">
               <li>언더웨어</li>
               <li>전체보기</li>
               <li>온라인단독</li>
@@ -220,12 +191,9 @@
               <li>SALE</li>
             </ul>
           </div>
-
         </li>
       </ul>
     </div>
-
-
     <div class="guide">
       <p class="guide_p">소셜미디어</p>
       <span class="guide_sp">휠라의 소식과 다양한 이벤트를 더욱 빠르게 전달받아보세요.</span>
@@ -248,14 +216,10 @@
         </li>
       </ul>
     </div>
-
-
-    </div>
   </aside>
 
-
   <main>
-    <div id="container" style="display: block;">
+    <div id="container" style="display: block; width: 100%; height: 100%;">
       <!-- 메인 영역 시작 -->
       <div class="main_vis">
         <!-- Swiper -->
@@ -352,7 +316,6 @@
         <div class="swiper-control"></div>
       </div>
       <!-- main_vis 영역끝 -->
-
       <div class="video_area">
         <div class="video_txt">
           <span class="vid_txt1">Watch</span>
@@ -372,7 +335,6 @@
 
 
       </div>
-
       <div class="product">
         <div class="prd_tit">
           <p class="prd_tit_p">인기상품</p>
@@ -436,12 +398,10 @@
 
 
       </div>
-
       <!-- Our Models 영역 -->
       <div class="prd_tit">
         <p class="prd_tit_p">신상품</p>
       </div>
-
       <div class="our_models">
         <p class="om_p">나의 MBTI에 맞는 퍼스널 언더웨어<br>FIND YOUR UNDERWEAR</p>
 
@@ -478,7 +438,7 @@
                     <div class="prd_txt_1">
                       <em class="cate_tit">FI4DRC6631M_MKH</em>
                       <div class="prd_logo">
-                        <img src="./images/logo.png" alt="">
+                        <img src="./images/logo.png" alt="휠라로고">
                       </div>
                     </div>
                     <div class="prd_i">
@@ -493,7 +453,7 @@
                   <div class="swiper-slide">
                     <h2 class="cate_tit">FI4DRC6405M_NAY</h2>
                     <div class="prd_logo">
-                      <img src="./images/logo.png" alt="">
+                      <img src="./images/logo.png" alt="휠라로고">
                     </div>
 
                     <div class="prd_i">
@@ -507,7 +467,6 @@
                   <div class="swiper-slide">
                     <div class="prd_txt">
                       <h2 class="cate_tit">FI4DRE1404M_DID</h2>
-
                     </div>
 
                     <div class="prd_i">
@@ -550,9 +509,8 @@
                     <h2 class="cate_tit">FI4BAE1445F</h2>
 
                     <div class="prd_i">
-                      <img src="./images/women1.jpg" alt="">
+                      <img src="./images/women1.jpg" alt="여성속옷">
                     </div>
-
                     <div class="btn">
                       Detail View
                     </div>
@@ -561,10 +519,9 @@
                   <div class="swiper-slide">
                     <div class="prd_txt_1">
                       <em class="cate_tit">FI4BAE1644F_BLK</em>
-
                     </div>
                     <div class="prd_i">
-                      <img src="./images/women2.jpg" alt="">
+                      <img src="./images/women2.jpg" alt="여성속옷">
                     </div>
                     <div class="btn">
                       Detail View
@@ -576,7 +533,7 @@
                     <h2 class="cate_tit">FI4BAE1644F_BLK</h2>
 
                     <div class="prd_i">
-                      <img src="./images/women3.jpg" alt="">
+                      <img src="./images/women3.jpg" alt="여성속옷">
                     </div>
 
                     <div class="btn">
@@ -709,12 +666,10 @@
           </div>
         </div>
       </div>
-
       <!-- the_awards  영역 -->
       <div class="prd_tit">
         <em class="awards_tit">ABOUT FILA</em>
       </div>
-
       <div class="awards_tab">
         <div class="txt01 on">
           <img src="./images/about_1.jpg" alt=""></div>
@@ -842,8 +797,7 @@
             휠라는 당사의 자산과 핵심 역량을 사회에 투자해 다양한 사회공헌 프로그램을 운영함으로써 사회적 가치를 창출하고 지역 사회의 역량 강화를 지원합니다.<br>
           </p>
         </div>
-      </div>
-      
+      </div>    
       <!-- space 영역 -->
       <div class="space">
         <div class="img_inner">
@@ -870,7 +824,6 @@
           <span class="space_btn">자세히 보기</span>
         </div>
       </div>
-
       <!-- Genesis Events영역 -->
       <div class="events">
         <div class="img_inner">
@@ -882,7 +835,6 @@
           </div>
         </div>
       </div>
-
       <!-- instagram영역 -->
       <div class="instagram">
         <div class="inst_tit">
@@ -966,7 +918,6 @@
           <p class="more_btn_p">더보기</p>
         </div>
       </div>
-
       <!-- 연관 컨텐츠 영역 -->
       <div class="content">
         <div class="con_title">
@@ -1016,10 +967,7 @@
 
       <div class="dimmed_bg"></div>
     </div>
-
   </main>
-
-
   <footer>
     <!-- footer -->
     <div class="footer">
@@ -1318,6 +1266,4 @@
 
   </footer>
 </body>
-</div>
-
 </html>

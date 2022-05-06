@@ -35,7 +35,7 @@ $(".gnb	li").hover(function(){
 			prevEl: '.prev_btn',
 		  },
       mousewheel: {
-        invert: true,
+        invert: false,
       },
     });
 

@@ -188,7 +188,7 @@ main .main_vis .swiper-button-next {
 
 .main_vis .swiper-pagination {
   position: absolute;
-  left: 50%;
+  left: 0;
   top: 50%;
   transform: translatey(-50%);
   bottom: 0;
@@ -411,7 +411,7 @@ main .main_vis .swiper-pagination-bullets.swiper-pagination-horizontal {
 
 .product .autoplay {
   position: absolute;
-  z-index: 99999;
+  z-index: 9;
   bottom: 5px;
   width: 18px;
   color: #000;

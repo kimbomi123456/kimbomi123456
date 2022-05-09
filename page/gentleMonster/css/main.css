@@ -383,8 +383,9 @@ main .arrow .arrowWrap::after {content: ""; position:absolute; z-index: 3; displ
 }
 
 /* 메인 섹션 5 비디오  */
-.section05 {position: relative; padding-bottom: 75%; padding-top: 25px; height: 0; width: 100%; margin: 30px auto;}
-.section05 iframe {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+.section05 {position: relative; width: 100%;}
+.section05 .videoWrap {position: relative; overflow: hidden; padding-bottom: 56.5%;}
+.section05 .videoWrap video{position: absolute; min-width: 100%; min-height: 100%; left: 50%; top:50%; transform: translate(-50%,-50%);}
 .section05 .moreBtn {position: absolute; top:50%; left:50%; transform: translate(-50%,-50%); width: 200px; height: 40px; border-radius: 30px; border: 1px solid #fff; text-align: center; background: transparent; font-size: 18px; color: #fff; line-height: 35px;}
 
 /* 텍스트 타이틀 효과  */
@@ -401,18 +402,17 @@ main .arrow .arrowWrap::after {content: ""; position:absolute; z-index: 3; displ
 .section06.inner .collaborationWrap .collaborationMain .swiper-container .swiper-wrapper .swiper-slide {width: 20%;}
 .section06.inner .collaborationWrap .collaborationMain .swiper-container .swiper-wrapper .swiper-slide .brandHome {display: block; width: 100%; height: 100%;}
 .section06.inner .collaborationWrap .collaborationMain .swiper-container .swiper-wrapper .swiper-slide .brandHome .brandImg {background-position: center;}
-.section06.inner .collaborationWrap .collaborationMain .swiper-container .swiper-wrapper .swiper-slide .brandHome .brandImg.fir {display: block; width: 100%; height: 600px; background: url(../images/section06.webp) no-repeat 0 0 / cover;}
-.section06.inner .collaborationWrap .collaborationMain .swiper-container .swiper-wrapper .swiper-slide .brandHome .brandImg.sec {display: block; width: 100%; height: 600px; background: url(../images/section06-1.jpg) no-repeat 0 0 / cover;}
-.section06.inner .collaborationWrap .collaborationMain .swiper-container .swiper-wrapper .swiper-slide .brandHome .brandImg.thi {display: block; width: 100%; height: 600px; background: url(../images/section06-2.jpg) no-repeat 0 0 / cover;}
-.section06.inner .collaborationWrap .collaborationMain .swiper-container .swiper-wrapper .swiper-slide .brandHome .brandImg.four {display: block; width: 100%; height:600px; background: url(../images/section06-4.webp) no-repeat 0 0 / cover;}
-.section06.inner .collaborationWrap .collaborationMain .swiper-container .swiper-wrapper .swiper-slide .brandHome .brandImg.fif {display: block; width: 100%; height: 600px; background: url(../images/YK_Jeong.jpg) no-repeat 0 0 / cover;}
+.section06.inner .collaborationWrap .collaborationMain .swiper-container .swiper-wrapper .swiper-slide .brandHome .brandImg.fir {display: block; width: 100%; height: 400px; background: url(../images/section06.webp) no-repeat 0 0 / cover;}
+.section06.inner .collaborationWrap .collaborationMain .swiper-container .swiper-wrapper .swiper-slide .brandHome .brandImg.sec {display: block; width: 100%; height: 400px; background: url(../images/section06-1.jpg) no-repeat 0 0 / cover;}
+.section06.inner .collaborationWrap .collaborationMain .swiper-container .swiper-wrapper .swiper-slide .brandHome .brandImg.thi {display: block; width: 100%; height: 400px; background: url(../images/section06-2.jpg) no-repeat 0 0 / cover;}
+.section06.inner .collaborationWrap .collaborationMain .swiper-container .swiper-wrapper .swiper-slide .brandHome .brandImg.four {display: block; width: 100%; height: 400px; background: url(../images/section06-4.webp) no-repeat 0 0 / cover;}
+.section06.inner .collaborationWrap .collaborationMain .swiper-container .swiper-wrapper .swiper-slide .brandHome .brandImg.fif {display: block; width: 100%; height: 400px; background: url(../images/YK_Jeong.jpg) no-repeat 0 0 / cover;}
 
 .section06.inner .collaborationWrap .collaborationMain .swiper-container .swiper-wrapper .swiper-slide .brandTxt{display: block; text-align: center; margin: 20px auto; font-size: 16px; font-weight: 700;}
 .section06.inner .collaborationWrap .collaborationMain .swiper-container .swiper-wrapper .swiper-slide .brandBtn{display:inline-block; text-align: center; padding:10px 30px; background: #000 ; color: #fff; margin-left: 40%;} 
 
 @media screen and (max-width:1024px) {
   .section06.inner .collaborationWrap .collaborationMain .swiper-container .swiper-wrapper .swiper-slide .brandBtn {font-size: 10px; padding: 5px 10px;}
-  .section06.inner .collaborationWrap .collaborationMain .swiper-container .swiper-wrapper .swiper-slide .brandHome .brandImg.fir, .section06.inner .collaborationWrap .collaborationMain .swiper-container .swiper-wrapper .swiper-slide .brandHome .brandImg.sec,  .section06.inner .collaborationWrap .collaborationMain .swiper-container .swiper-wrapper .swiper-slide .brandHome .brandImg.thi, .section06.inner .collaborationWrap .collaborationMain .swiper-container .swiper-wrapper .swiper-slide .brandHome .brandImg.four,  .section06.inner .collaborationWrap .collaborationMain .swiper-container .swiper-wrapper .swiper-slide .brandHome .brandImg.fif {height: 400px;}
 }
 
 /* 푸터 */

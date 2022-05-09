@@ -171,7 +171,7 @@ $(function(){
   }
   });
 
-//  제품 바로 알기 호버시 넓이 변화
+// 하츠 제품 바로 알기 호버시 넓이 변화
   $(".leftLayout").mouseenter(function() {
     $(this).stop().animate({width: "55%"});
     $(this).siblings(".rightLayout").stop().animate({width: "45%"});
@@ -234,7 +234,7 @@ $("footer .ftFamily .siteButton").click(function(){
   });
 
 var windowWidth = $(window).width();
-  gsap.to(".section05> iframe", {
+  gsap.to(".section05 .videoWrap", {
     scrollTrigger:{
     trigger:".section05",
     start:"top top",

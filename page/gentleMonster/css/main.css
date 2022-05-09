@@ -10,7 +10,7 @@ header.active .headerInner::before {content: ""; position: absolute; display: bl
 header .logoBlock {display: none;}
 header.active .logoBlock {display: block;}
 header .headerInner .logoH1 {position: absolute; top :50%; left:40px; transform: translateY(-50%); z-index: 11; display: inline-block; width: 200px; height: 70px; background:#fff;}
-header .headerInner .logoH1 .logoImg {display:block; background: url(./images/logoNew.png) no-repeat 50% 50% /contain; width: 200px; height: 70px; background-position:center;}
+header .headerInner .logoH1 .logoImg {display:block; background: url(../images/logoNew.png) no-repeat 50% 50% /contain; width: 200px; height: 70px; background-position:center;}
 
 header.active .headerInner .logoH1 {width: 200px; height: 70px;}
 header.active .headerInner .logoH1 .logoImg {display: inline-block; width: 200px; height: 70px;}
@@ -97,8 +97,8 @@ header .fullMenu.open .secMenuWrap .secMenuWrapHeight .twoItemWrap {display: blo
 
 /* 햄버거 메뉴 클릭시 등장하는 풀메뉴 */
 header .fullMenu.open .lineBottom {position: absolute; top: 70px; left: 0; width: 100%; height: 1px; background: #dbdbdb;}
-header .fullMenu.open .twoItems {display: block; width: 100%; line-height: 1; font-size: 18px; font-weight: 700; color: #000; padding: 5px 0;}
-header .fullMenu.open .twoItems.showMenu {color: #000;}
+header .fullMenu.open .twoItems {display: block; width: 100%; line-height: 1; font-size: 18px; color: #000; padding: 5px 0;}
+header .fullMenu.open .twoItems.showMenu {color: #000; font-weight: 700;}
 header .fullMenu.open .twoItemsChild {border-bottom: 1px solid #dbdbdb; height: 0; overflow: hidden;}
 header .fullMenu.open .twoItemsChild .twoItemsInner {display: block; width: 100%; height: 200px; overflow-y: scroll;}
 header .fullMenu.open .twoItemsChild .twoItemsInner li {display: block; font-size: 15px;}

@@ -10,7 +10,7 @@ header.active .headerInner::before {content: ""; position: absolute; display: bl
 header .logoBlock {display: none;}
 header.active .logoBlock {display: block;}
 header .headerInner .logoH1 {position: absolute; top :50%; left:40px; transform: translateY(-50%); z-index: 11; display: inline-block; width: 200px; height: 70px; background:#fff;}
-header .headerInner .logoH1 .logoImg {display:block; background: url(../images/logoNew.png) no-repeat 50% 50% /contain; width: 200px; height: 70px; background-position:center;}
+header .headerInner .logoH1 .logoImg {display:block; background: url(./images/logoNew.png) no-repeat 50% 50% /contain; width: 200px; height: 70px; background-position:center;}
 
 header.active .headerInner .logoH1 {width: 200px; height: 70px;}
 header.active .headerInner .logoH1 .logoImg {display: inline-block; width: 200px; height: 70px;}

@@ -9,11 +9,11 @@ header::before{display: none; transition: all .3s; content: ""; position: absolu
 header.active .headerInner::before {content: ""; position: absolute; display: block; width: 100%; height: 500px; color:#000; background:#fff; box-shadow: 1px 1px 1px 1px #ccc; box-shadow: #202020;}
 header .logoBlock {display: none;}
 header.active .logoBlock {display: block;}
-header .headerInner .logoH1 {position: absolute; top :50%; left:40px; transform: translateY(-50%); z-index: 11; display: inline-block; width: 200px; height: 70px; background:#fff;}
-header .headerInner .logoH1 .logoImg {display:block; background: url(../images/logoNew.png) no-repeat 50% 50% /contain; width: 200px; height: 70px; background-position:center;}
+header .headerInner .logoH1 {position: absolute; top :50%; left:40px; transform: translateY(-50%); z-index: 11; display: inline-block; width: 200px; height: 70px;}
+header .headerInner .logoH1 .logoImg {display:block; background: url(../images/logoNewFff.png) no-repeat 50% 50% /contain; width: 200px; height: 70px; background-position:center;}
 
 header.active .headerInner .logoH1 {width: 200px; height: 70px;}
-header.active .headerInner .logoH1 .logoImg {display: inline-block; width: 200px; height: 70px;}
+header.active .headerInner .logoH1 .logoImg {display: inline-block; width: 200px; height: 70px; background: url(../images/logoNew.png) no-repeat 50% 50% /contain;}
 header .headerInner .centerMenu .menuArea {height: 70px; text-align: center;}
 header .headerInner  .centerMenu .menuArea .gnbListWrap {display: block;}
 header .headerWrap.inner {width: 610px;}
@@ -97,7 +97,7 @@ header .fullMenu.open .secMenuWrap .secMenuWrapHeight .twoItemWrap {display: blo
 
 /* 햄버거 메뉴 클릭시 등장하는 풀메뉴 */
 header .fullMenu.open .lineBottom {position: absolute; top: 70px; left: 0; width: 100%; height: 1px; background: #dbdbdb;}
-header .fullMenu.open .twoItems {display: block; width: 100%; line-height: 1; font-size: 18px; color: #000; padding: 5px 0;}
+header .fullMenu.open .twoItems {display: block; width: 100%; line-height: 1; font-size: 18px; color: #000; padding: 10px 0;}
 header .fullMenu.open .twoItems.showMenu {color: #000; font-weight: 700;}
 header .fullMenu.open .twoItemsChild {border-bottom: 1px solid #dbdbdb; height: 0; overflow: hidden;}
 header .fullMenu.open .twoItemsChild .twoItemsInner {display: block; width: 100%; height: 200px; overflow-y: scroll;}
@@ -186,13 +186,13 @@ header .menu1 > .centerMenuInner > .centerMenuName> .centerItemClick:hover {colo
   header .fullMenu.open .fullMenuWrap.inner .ctaName .ctaMenuInner {display: block; width: 100%; height: 100%;}
   /* 하위메뉴 감싸는 div  */ 
   header .fullMenu.open .secMenuWrap {display: block; width: 100%; height: 0; overflow: hidden; background: #dedede; color: #000;}
-  header .fullMenu.open .secMenuWrap .secMenuWrapHeight, header .fullMenu.open .twoItemsChild ul {display: block; width: 100%; height: 50vh;}
+  header .fullMenu.open .secMenuWrap .secMenuWrapHeight, header .fullMenu.open .twoItemsChild ul {display: block; width: 100%; height: 30vh; overflow-y: scroll;}
   header .fullMenu.open .secMenuWrap .secMenuWrapHeight .twoItemWrap {display: block; width: 100%; padding: 2%;}
-  header .fullMenu.open .twoItems {width: 100%; border-bottom: none; font-size: 15px; color: #19315b; text-align: left;}
+  header .fullMenu.open .twoItems {width: 100%; border-bottom: none; font-size: 15px; color: #19315b; text-align: left; padding:5px 0;}
   header .fullMenu.open .twoItems.showMenu {color: #000;}
   
   header .fullMenu.open .twoItemsChild {padding:0; border-bottom: none; height: 0; overflow: hidden;}
-  header .fullMenu.open .twoItemsChild .twoItemsInner{display: block; width: 100%; height: 200px; overflow-y: scroll;}
+  header .fullMenu.open .twoItemsChild .twoItemsInner{display: block; width: 100%; height: 100px; overflow-y: scroll;}
   header .fullMenu.open .oneItem:hover {border-bottom: 1px solid #ddd;}
   header .fullMenu.open .twoItemsChild ul li a {margin-top: 0;}
   header .fullMenu.open .twoItemsChild ul li a:hover {color:none; font-weight: 700; background: #ccc;}
@@ -262,7 +262,7 @@ main .arrow .arrowWrap::after {content: ""; position:absolute; z-index: 3; displ
 /* 좌측 텍스트 */
 .section02 .leftLayout .textWrap {color: #fff; bottom: 10px; left: 50%; transform: translateX(-50%);}
 
-.section02 .textWrap.B {display:inline-block; text-align: right; padding: 5px 20px;}
+.section02 .textWrap.B {display:inline-block; text-align: right;}
 .section02 .arrow {display: inline-block; margin:50px auto 30px; width: 100px; height: 22px; vertical-align: top;}
 .section02 .rightLayout .rightCommon {display: block; width: 100%; height: 446px; background-position: center;}
 
@@ -314,7 +314,7 @@ main .arrow .arrowWrap::after {content: ""; position:absolute; z-index: 3; displ
 }
 
 /*메인 영역 : support section03, gsap 사용한 영역  */
-.section03 {width: 100%; margin: 30px auto;}
+.section03 {width: 100%; margin: 100px auto;}
 .section03 .centerInner {text-align: center;}
 .section03 .forHelpTxt {display: inline-block;}
 .section03 .supportTxt {display: block; margin-bottom: 30px; font-size: 18px; font-weight: 700;} 
@@ -354,7 +354,7 @@ main .arrow .arrowWrap::after {content: ""; position:absolute; z-index: 3; displ
 
 /* 메인 영역 : .section04  */
 .section04 {position: relative; display: block; padding-top: 120px; width: 100%; background: #f1f1f1;}
-.section04 .swiper-container {padding-bottom:170px;}
+.section04 .swiper-container {padding-bottom: 70px;}
 .section04 .swiper-container .swiper-wrapper .swiper-slide {float: left;}
 .section04 .swiper-container .swiper-wrapper .swiper-slide.articles {display: inline-block; width: 310px; height: 470px; margin-right: 25px;}
 .section04 .swiper-container .swiper-wrapper .swiper-slide.articles:last-child {margin-right: 0;}
@@ -382,7 +382,7 @@ main .arrow .arrowWrap::after {content: ""; position:absolute; z-index: 3; displ
 
 /* 메인 영역 : .section04 미디어쿼리 */
 @media screen and (max-width:1024px) {
-  .section04 {padding: 50px 0 50px 0; padding-bottom: 200px;}
+  .section04 {padding: 50px 0 50px 0;}
   .section04 .supportTxt {display: none;}
   .section04 .supportP {font-size: 20px; margin-bottom: 40px;}
   .section04 .swiper-container .swiper-wrapper .swiper-slide.articles {width: 100%; margin: 0 auto;}

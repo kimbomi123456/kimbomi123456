@@ -36,7 +36,7 @@ $(function(){
   var contSection02 = new Swiper(".section01 .swiper-container", {
     spaceBetween:0,
     autoplay: {
-      delay: 6500,
+      delay: 5500,
       disableOnInteraction: false,
     }, 
     pagination: {
@@ -256,6 +256,10 @@ $("footer .ftFamily .siteButton").click(function(){
   var section06 = new Swiper(".section06.inner .swiper-container", {
     slidesPerView: 3,
     spaceBetween: 20,
+    autoplay: {
+      delay: 4500,
+      disableOnInteraction: false,
+    }, 
     // slidesPerGroup: 3,
     loop: true,
     loopFillGroupWithBlank: true,

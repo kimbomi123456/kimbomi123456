@@ -269,7 +269,6 @@ $("footer .ftFamily .siteButton").click(function(){
     },
     1023: {
       slidesPerView: 1,
-      slidesPerGroup: 1,
       spaceBetween: 0,
       centeredSlides: true,
   },

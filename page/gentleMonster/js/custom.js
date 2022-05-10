@@ -15,23 +15,23 @@ $(function(){
   });
 
 //헤더 메뉴 내 하위 메뉴 나와라
-  $(".subMenuList.plus").click(function(){
-    var openSecondMenu = $(this).parent().find("ul").outerHeight();
-    if ($(this).hasClass("on")) 
-    {
-      $(this).removeClass("on");
-      $(this).parent().find("div").stop().animate({ height: "0" });
-      $(this).find(".icon.plus").removeClass("on");
-      $(this).find(".icon.minus").removeClass("on");
-    } 
-    else 
-    {
-      $(this).addClass("on");
-      $(this).parent().find("div").stop().animate({ height: openSecondMenu });
-      $(this).find(".icon.plus").addClass("on");
-      $(this).find(".icon.minus").addClass("on");
-    }
-  });
+  // $(".subMenuList.plus").click(function(){
+  //   var openSecondMenu = $(this).parent().find("ul").outerHeight();
+  //   if ($(this).hasClass("on")) 
+  //   {
+  //     $(this).removeClass("on");
+  //     $(this).parent().find("div").stop().animate({ height: "0" });
+  //     $(this).find(".icon.plus").removeClass("on");
+  //     $(this).find(".icon.minus").removeClass("on");
+  //   } 
+  //   else 
+  //   {
+  //     $(this).addClass("on");
+  //     $(this).parent().find("div").stop().animate({ height: openSecondMenu });
+  //     $(this).find(".icon.plus").addClass("on");
+  //     $(this).find(".icon.minus").addClass("on");
+  //   }
+  // });
 
   var contSection02 = new Swiper(".section01 .swiper-container", {
     spaceBetween:0,
@@ -203,7 +203,6 @@ $("footer .ftFamily .siteButton").click(function(){
 });
 
   gsap.registerPlugin(ScrollTrigger);
-
   // support 영역 박스 3개
   gsap.to(".section03 .boxWrap", {
     scrollTrigger: {
@@ -214,45 +213,7 @@ $("footer .ftFamily .siteButton").click(function(){
     stagger: .3, opacity: 1, y: 0, duration: .5,
   });
 
-// 모바일 햄버거 메뉴 내 하위메뉴
-  $(".oneMenu1> .oneItem").click(function(){
-    var openMenu = $(this).parent().find("ul:not(.twoItemsInner)").outerHeight();
-
-    if($(this).hasClass("plus")){
-      $(this).removeClass("plus");
-      $(this).parent().find("div:not(.twoItemsChild)").stop().animate({height:"0"});
-      // $(".submenu").removeClass("plus")
-  
-    }
-    else{/*  console.log("ssdsd"); */
-      // $(this).addClass("plus");
-      // $(".submenu").removeClass("plus");
-      $(".secMenuWrap").stop().animate({ height:"0"});
-      // $("this").parent().find(".secMenuWrap").stop().animate({height:"0"});
-      $(this).addClass("plus");
-      $(this).parent().find("div:not(.twoItemsChild").stop().animate({ height: openMenu });
-    }
-  });
-
-// 모바일 메뉴 아코디언 두번째 하위
-  $(".twoItems").click(function(){
-    var openTwoItems = $(this).parent().find("ul:not(.secMenuWrapHeight)").outerHeight();
-
-    if($(this).hasClass("showMenu")){
-      $(this).removeClass("showMenu");
-      $(this).parent().find("div:not(.secMenuWrap)").stop().animate({height:"0"});
-      // $(".submenu").removeClass("plus")
-    }
-    else{/*  console.log("ssdsd"); */
-      // $(this).addClass("plus");
-      // $(".submenu").removeClass("plus");
-      $(".twoItemsChild").stop().animate({ height:"0"});
-      // $("this").parent().find(".secMenuWrap").stop().animate({height:"0"});
-      $(this).addClass("showMenu");
-      $(this).parent().find("div:not(.secMenuWrap)").stop().animate({ height: openTwoItems });
-    }
-  });
-
+  // .not(".twoItemsChild", ".secMenuWrap").not(".twoItemsInner", ".secMenuWrapHeight")
   var section06 = new Swiper(".section06.inner .swiper-container", {
     slidesPerView: 3,
     spaceBetween: 20,
@@ -302,6 +263,55 @@ $("footer .ftFamily .siteButton").click(function(){
   createLayers()
   animateText()
 
+// 모바일 메뉴
+/* three depth menu */
+(function($){
+  var menuWrap = {
+    click : function (target, speed) {
+      var _self = this,
+          $target = $(target);
+      _self.speed = speed || 300; 
+      $target.each(function(){
+        if(findChildren($(this))) {
+          return;
+        }
+        $(this).addClass('noDepth');
+      });
+      
+      function findChildren(obj) {
+        return obj.find('> ul').length > 0;
+      }
+      
+      $target.on('click','a', function(e){
+          e.stopPropagation();
+          var $this = $(this),
+              $depthTarget = $this.next(),
+              $siblings = $this.parent().siblings();
+        
+        $this.parent('li').find('ul li').removeClass('on');
+        $siblings.removeClass('on');
+        $siblings.find('ul').slideUp(250);
+        
+        if($depthTarget.css('display') == 'none') {
+          _self.activeOn($this);
+          $depthTarget.slideDown(_self.speed);
+        } else {
+          $depthTarget.slideUp(_self.speed);
+          _self.activeOff($this);
+        }
+      })
+    },
+    activeOff : function($target) {
+      $target.parent().removeClass('on');
+    },
+    activeOn : function($target) {
+      $target.parent().addClass('on');
+    }
+  };
+  // Call lnbUI
+  $(function(){
+    menuWrap.click('.threeDepthMenu li', 300)
+  });    
+}(jQuery));
+
 });
-
-

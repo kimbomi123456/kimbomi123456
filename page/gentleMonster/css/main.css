@@ -201,11 +201,6 @@ header .menu1 > .centerMenuInner > .centerMenuName> .centerItemClick:hover {colo
 /* header .fullMenu.open .fullMenuWrap.inner {padding-top: 0;} */
 header .fullMenu.open .fullMenuWrap.inner {width: 100%; padding-top: 0;}
 header .fullMenu .fullMenuWrap.inner .threeDepthMenu {position: relative; width: 100%; display: block;}
-
- /* 모바일 메뉴 로고 */
-.threeDepthMenu .threeDepthMenuLogo { display: block;
-margin-left: 100px; width: 200px; height: 40px; text-align: center; color: #fff; font-size: 20px;line-height: 1.8; letter-spacing: -2px; background: url(../images/logoNew.png) no-repeat 50% 50% / contain; background-position: center;}
-
 .threeDepthMenu > ul {display: block; width: 100%;}
 .threeDepthMenu > ul > li { display: block; width: 100%;}
 .threeDepthMenu > ul > li > a {display: block; padding: 14px 35px 14px 15px; color: inherit; font-size: 15px;background: url(../images/moPlus.gif) no-repeat right;}
@@ -285,7 +280,7 @@ main .arrow .arrowWrap::after {content: ""; position:absolute; z-index: 3; displ
 
 .section02 .textWrap {position: absolute; z-index: 2; display:inline-block; padding: 0 15px; line-height: 50px; font-size: 40px; color: #fff;}
 /* 좌측 텍스트 */
-.section02 .leftLayout .textWrap {color: #fff; bottom: 20%; left: 50%; transform: translateX(-50%);}
+.section02 .leftLayout .textWrap {color: #fff; bottom: 10px; left: 50%; transform: translateX(-50%);}
 
 .section02 .textWrap.B {display:inline-block;}
 .section02 .arrow {display: inline-block; margin:50px auto 30px; width: 100px; height: 22px; vertical-align: top;}

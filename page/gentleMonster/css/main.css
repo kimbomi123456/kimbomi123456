@@ -6,14 +6,11 @@
 /* 헤더 */
 header {position: fixed; top:0; left:0; z-index: 9; display: block; width: 100%; height: 70px; color: #ffffff; background:black;}
 header::before{display: none; transition: all .3s; content: ""; position: absolute;}
-header.active .headerInner::before {content: ""; position: absolute; display: block; width: 100%; height: 500px; color:#000; background:#fff; box-shadow: 1px 1px 1px 1px #ccc; box-shadow: #202020;}
+
 header .logoBlock {display: none;}
-header.active .logoBlock {display: block;}
 header .headerInner .logoH1 {position: absolute; top :50%; left:40px; transform: translateY(-50%); z-index: 11; display: inline-block; width: 200px; height: 70px;}
 header .headerInner .logoH1 .logoImg {display:block; background: url(../images/logoNewFff.png) no-repeat 50% 50% /contain; width: 200px; height: 70px; background-position:center;}
 
-header.active .headerInner .logoH1 {width: 200px; height: 70px;}
-header.active .headerInner .logoH1 .logoImg {display: inline-block; width: 200px; height: 70px; background: url(../images/logoNew.png) no-repeat 50% 50% /contain;}
 header .headerInner .centerMenu .menuArea {height: 70px; text-align: center;}
 header .headerInner  .centerMenu .menuArea .gnbListWrap {display: block;}
 header .headerWrap.inner {width: 610px;}
@@ -61,6 +58,11 @@ header .utils .productSearch .productSearchTxt::before {content: ""; position: a
 header .utils .searchBtn .searchBtnBox::before {content: ""; position: absolute; top:50%; left: 50%; transform: translate(-50%,-50%); display: block; width: 30px; height: 30px; color: #000; background: url(../images/search.png) no-repeat 50% 50%;}
 
 /* acitve추가 */
+header.active .logoBlock {display: block;}
+header.active .headerInner::before {content: ""; position: absolute; display: block; width: 100%; height: 500px; color:#000; background:#fff; box-shadow: 1px 1px 1px 1px #ccc; box-shadow: #202020;}
+
+header.active .headerInner .logoH1 {width: 200px; height: 70px;}
+header.active .headerInner .logoH1 .logoImg {display: inline-block; width: 200px; height: 70px; background: url(../images/logoNew.png) no-repeat 50% 50% /contain;}
 header.active .utils {border-bottom: 1px solid rgb(222, 208, 208);}
 header.active .utils .searchBtnBox::before {background: url(../images/search000.png) no-repeat 0;}
 header.active .utils .searchBtn {border-left: 1px solid #ccc;}
@@ -86,28 +88,42 @@ header .fullMenu.open {right: 0; display: block; overflow-y: auto; transition: a
 header .fullMenu.open  .logoImg .logoH1 {display: none;}
 header .close span {display: block;}
 header .fullMenu.open .fullMenuWrap.inner {width: 100%; padding-top: 70px;}
-header .fullMenu.open .fullMenuWrap.inner .ctaName {display: block; overflow: hidden; width: 980px; margin: 0 auto; height: 100vh;}
-header .fullMenu.open .fullMenuWrap.inner .ctaName .ctaMenuInner {width: 980px; margin: 0 auto; height: 100vh;}
-header .fullMenu.open .oneItem {position: relative; display: block; height: 121px; line-height: 121px; font-size: 22px; font-weight: 700; color: rgb(0, 0, 0); border-bottom:  1px solid #ddd;}
+header .fullMenu.open .fullMenuWrap.inner .ctaName {display: block; overflow: hidden; width: 980px; margin: 0 auto; height: 100%;}
+header .fullMenu.open .fullMenuWrap.inner .ctaName .ctaMenuInner {width: 980px; margin: 0 auto; height: 100%;} 
+header .fullMenu.open .fullMenuWrap.inner {width: 980px; margin: 0 auto;}
+
+
+/* 모바일 댑스  메뉴*/
+.threeDepthMenu {display: none;}
+
+header .fullMenu.open .oneItem {position: relative; display: block; height: 121px; line-height: 121px; font-size: 25px; font-weight: 300; color: rgb(0, 0, 0);}
+header .fullMenu.open .oneItem::after {content: ""; position: absolute; display: block; background: none repeat scroll 0 0 transparent; bottom: 0; height: 2px; left: 50%; background: darkblue; transition: width 0.3s ease 0s, left 0.3s ease 0s; width: 0;}
 
 header .fullMenu.open .oneMenu1 {float: left; width: 25%; padding-right: 25px;}
 header .fullMenu.open .oneMenu1:last-child {padding-right: 0;}
 header .fullMenu.open .secMenuWrap .secMenuWrapHeight {width: 100%;}
-header .fullMenu.open .secMenuWrap .secMenuWrapHeight .twoItemWrap {display: block; width: 100%; padding: 2%;}
+header .fullMenu.open .secMenuWrap .secMenuWrapHeight .twoItemWrap {display: block; width: 100%;}
 
 /* 햄버거 메뉴 클릭시 등장하는 풀메뉴 */
 header .fullMenu.open .lineBottom {position: absolute; top: 70px; left: 0; width: 100%; height: 1px; background: #dbdbdb;}
-header .fullMenu.open .twoItems {display: block; width: 100%; line-height: 1; font-size: 18px; color: #000; padding: 10px 0;}
-header .fullMenu.open .twoItems.showMenu {color: #000; font-weight: 700;}
-header .fullMenu.open .twoItemsChild {border-bottom: 1px solid #dbdbdb; height: 0; overflow: hidden;}
-header .fullMenu.open .twoItemsChild .twoItemsInner {display: block; width: 100%; height: 200px; overflow-y: scroll;}
-header .fullMenu.open .twoItemsChild .twoItemsInner li {display: block; font-size: 15px;}
-header .fullMenu.open .twoItemsChild .twoItemsInner li a {display: block; margin-top: 10px;}
+header .fullMenu.open .twoItems {position: relative; display: block; padding: 10px 2px; width: 100%; height: 100%; line-height: 1; font-size: 18px; color: #000; border-top: 1px solid #ddd;}
+header .fullMenu.open .twoItems::after {position: absolute; content: "";  display: block; background: none repeat scroll 0 0 transparent; bottom: 0; height: 2px; left: 50%; background: darkblue; transition: width 0.3s ease 0s, left 0.3s ease 0s; width: 0;}
+
+header .fullMenu.open .twoItems.showMenu {color: #000; font-weight: 700;} 
+header .fullMenu.open .subList {padding: 0 5px;}
+header .fullMenu.open .twoItemsChild .twoItemsInner>li {display: block; width: 100%; font-size: 15px;}
+header .fullMenu.open .twoItemsChild .twoItemsInner li a {position: relative; display: block; margin: 10px; padding: 5px;}
+header .fullMenu.open .twoItemsChild .twoItemsInner li a::after {content: ""; position: absolute; display: block; background: none repeat scroll 0 0 transparent; bottom: 0; height: 2px; left: 50%; background: darkblue; transition: width 0.3s ease 0s, left 0.3s ease 0s; width: 0;}
+
 header .asideMenu {display: none;}
 
 /* 호버시 */
-header .fullMenu.open .oneItem:hover {border-bottom: 5px solid #000;}
-header .fullMenu.open .twoItemsChild .twoItemsInner li a:hover {color: #ddd;}
+header .fullMenu.open .oneItem:hover:after {left: 0; width: 100%;}
+header .fullMenu.open .twoItems:hover {font-weight: 700;}
+header .fullMenu.open .twoItems:hover:after {left: 0; width: 100%;}
+header .fullMenu.open .twoItemsChild .twoItemsInner li a:hover:after {left: 0; width: 100%;}
+header .fullMenu.open .oneItem:hover{font-weight: 700;}
+header .fullMenu.open .twoItemsChild .twoItemsInner li a:hover{font-weight: 700;}
 
 /* 상품 찾기 탭메뉴 */
 header .productSearchArea {position:fixed; top: 0; left: 0; z-index:36; overflow: hidden; width: 100%; height: 0; color: #fff; background: #000; transition: ease .8s;}
@@ -149,7 +165,6 @@ header .menu1 > .centerMenuInner > .centerMenuName> .centerItemClick:hover {colo
   header .headerInner::before {display: none;}
   header.active .headerInner::before {display: block;}
   header .headerInner .utils {width: 220px; right: 0; border-left: none; border-bottom: none;}
-
   header .headerInner .utils .searchBtn {position: absolute; right: 0; padding: 17px 15px 16px; width: 45px; height: 47px; border-left: none;}
   header .headerInner .utils .searchBtn::before {position: absolute; top:50%; right: 0;  width: 14px; height: 15px; background: url(../images/moSearch.png) no-repeat 0 / contain;}
   header .headerWrap.inner {display: block; width: 100%; height: 50px;}
@@ -164,7 +179,6 @@ header .menu1 > .centerMenuInner > .centerMenuName> .centerItemClick:hover {colo
 
   /* active클래스 붙을 경우 */
   header .headerInner.active .utils .searchBtn {width: 50px; height: 50px; border-left: none;}
-
   header::before .headerInner .utils .searchBtn {border-left:none;}
   header .headerInner .utils .shoppingMall, header .headerInner.active .utils .searchBtn {display: none;}
   header .headerInner.active {width: 60%; left: 0;}
@@ -173,30 +187,41 @@ header .menu1 > .centerMenuInner > .centerMenuName> .centerItemClick:hover {colo
   header .productSearchArea .productMenuInner .click>ul>li {padding: 16px 0; width: 32%; font-size: 16px;}
   /* 모바일 버전 헤더 */
   /* 모바일 헤더 햄버거 클릭시 풀메뉴 등장*/
-  header .fullMenu {left:-100%; width: 70%; height: 100%; padding-top: 70px;}
+  header .fullMenu {left:-100%; width: 70%; height: 100%; padding-top: 50px;}
   header .fullMenu.open {left: 0; z-index: 11;}
   /*햄버거 메뉴 클릭시 나오는  메뉴 */
   /* 햄버거 메뉴 클릭시 등장하는 풀메뉴 내 닫기 버튼 */
   header .close {top:10px; right: 10px;}
-  header .fullMenu.open .lineBottom {top:50px;}
-  header .fullMenu.open .fullMenuWrap.inner .ctaName {width: 100%; height: 80vh; text-align: left;}
-  header .fullMenu.open .oneMenu1 {display: block; width: 100%; line-height: 45px;}
-  header .fullMenu.open .oneMenu1 .oneItem {display: block; width: 100%; line-height: 45px; font-size: 15px; height: 45px; font-weight: 300;}
-  header .fullMenu.open .oneMenu1 .oneItem.plus {font-weight: 700;}
-  header .fullMenu.open .fullMenuWrap.inner .ctaName .ctaMenuInner {display: block; width: 100%; height: 100%;}
-  /* 하위메뉴 감싸는 div  */ 
-  header .fullMenu.open .secMenuWrap {display: block; width: 100%; height: 0; overflow: hidden; background: #dedede; color: #000;}
-  header .fullMenu.open .secMenuWrap .secMenuWrapHeight, header .fullMenu.open .twoItemsChild ul {display: block; width: 100%; height: 30vh; overflow-y: scroll;}
-  header .fullMenu.open .secMenuWrap .secMenuWrapHeight .twoItemWrap {display: block; width: 100%; padding: 2%;}
-  header .fullMenu.open .twoItems {width: 100%; border-bottom: none; font-size: 15px; color: #19315b; text-align: left; padding:5px 0;}
-  header .fullMenu.open .twoItems.showMenu {color: #000;}
-  
-  header .fullMenu.open .twoItemsChild {padding:0; border-bottom: none; height: 0; overflow: hidden;}
-  header .fullMenu.open .twoItemsChild .twoItemsInner{display: block; width: 100%; height: 100px; overflow-y: scroll;}
-  header .fullMenu.open .oneItem:hover {border-bottom: 1px solid #ddd;}
-  header .fullMenu.open .twoItemsChild ul li a {margin-top: 0;}
-  header .fullMenu.open .twoItemsChild ul li a:hover {color:none; font-weight: 700; background: #ccc;}
-  header .fullMenu.open .fullMenuWrap.inner {padding-top: 0;}
+  header .fullMenu.open .lineBottom {display: none;}
+  /* pc 버전일 때 넓이 전체 덮는 메뉴 */
+  header .fullMenu.open .fullMenuWrap.inner .ctaName {display: none;}
+
+/* 모바일 햄버거 메뉴 클릭시 등장하는 메뉴 */
+/* threeDepthMenu */
+/* header .fullMenu.open .fullMenuWrap.inner {padding-top: 0;} */
+header .fullMenu.open .fullMenuWrap.inner {width: 100%; padding-top: 0;}
+header .fullMenu .fullMenuWrap.inner .threeDepthMenu {position: relative; width: 100%; display: block;}
+
+ /* 모바일 메뉴 로고 */
+.threeDepthMenu .threeDepthMenuLogo { display: block;
+margin-left: 100px; width: 200px; height: 40px; text-align: center; color: #fff; font-size: 20px;line-height: 1.8; letter-spacing: -2px; background: url(../images/logoNew.png) no-repeat 50% 50% / contain; background-position: center;}
+
+.threeDepthMenu > ul {display: block; width: 100%;}
+.threeDepthMenu > ul > li { display: block; width: 100%;}
+.threeDepthMenu > ul > li > a {display: block; padding: 14px 35px 14px 15px; color: inherit; font-size: 15px;background: url(../images/moPlus.gif) no-repeat right;}
+.threeDepthMenu > ul > li a:hover {color: #000;}
+.threeDepthMenu > ul > li.on > a {color: #000; background: #f5f2ec url(../images/moPlus.gif) no-repeat right;}
+.threeDepthMenu > ul > li ul {display: none;}
+.threeDepthMenu > ul > li > ul > li > a {display: block; padding: 14px 25px 14px 14px; font-size: 15px;
+  background: url(../images/moPlus.gif) no-repeat right;}
+.threeDepthMenu > ul > li > ul > li > a {color: #000;}
+.threeDepthMenu > ul > li > ul > li.on a {color: #000; background: #f5f2ec url(../images/moPlus.gif) no-repeat right;}
+.threeDepthMenu > ul > li > ul li ul {display: none; padding-bottom: 8px; background-color: #f5f2ec;}
+.threeDepthMenu > ul > li > ul li li a {display: block;padding: 10px 25px 10px 22px; color: #666; font-size: 15px;background-color: #f5f2ec;}
+.threeDepthMenu > ul > li > ul > li li a:hover {font-weight: 700;}
+
+.threeDepthMenu > ul li.noDepth a {background-image: none !important;}
+
   /* 상품 찾기 클릭시 등장하는 탭메뉴 */
   /* header .productSearchArea .productMenuInner .tab .list ul {} */
   header .productSearchArea .productMenuInner .name {font-size: 15px;}
@@ -258,11 +283,11 @@ main .arrow .arrowWrap::after {content: ""; position:absolute; z-index: 3; displ
 .section02 {position: relative; width: 100%;}
 .section02 .layoutWrap {display: flex; width: 100%;}
 
-.section02 .textWrap {position: absolute; z-index: 2; display:inline-block; line-height: 50px; font-size: 40px; color: #fff;}
+.section02 .textWrap {position: absolute; z-index: 2; display:inline-block; padding: 0 15px; line-height: 50px; font-size: 40px; color: #fff;}
 /* 좌측 텍스트 */
-.section02 .leftLayout .textWrap {color: #fff; bottom: 10px; left: 50%; transform: translateX(-50%);}
+.section02 .leftLayout .textWrap {color: #fff; bottom: 20%; left: 50%; transform: translateX(-50%);}
 
-.section02 .textWrap.B {display:inline-block; text-align: right;}
+.section02 .textWrap.B {display:inline-block;}
 .section02 .arrow {display: inline-block; margin:50px auto 30px; width: 100px; height: 22px; vertical-align: top;}
 .section02 .rightLayout .rightCommon {display: block; width: 100%; height: 446px; background-position: center;}
 
@@ -377,7 +402,7 @@ main .arrow .arrowWrap::after {content: ""; position:absolute; z-index: 3; displ
 .section04 .articleTxt .date .views .viewsInner::before {content: ""; position: absolute; left:-80%; display: block; width: 20px; height: 13px; background: url(../images/iconEyes.png) no-repeat 0;}
 
 /* .section04 뉴스 영역 페이지네이션 */
-.section04 .swiper-pagination {position: absolute; bottom: 120px; margin-top: 50px; display: block; width: 100%; height: 20px;}
+.section04 .swiper-pagination {position: absolute; bottom: 20px; margin-top: 50px; display: block; width: 100%; height: 20px;}
 .section04 .swiper-pagination-bullet-active {opacity: 1; background: #a6a9aa;}
 
 /* 메인 영역 : .section04 미디어쿼리 */
@@ -420,7 +445,7 @@ height: 50px;}
 .section06.inner .collaborationWrap .collaborationMain .swiper-container .swiper-wrapper .swiper-slide .brandHome .brandImg.fif {display: block; width: 100%; height: 600px; background: url(../images/YK_Jeong.jpg) no-repeat 0 0 / cover;}
 
 .section06.inner .collaborationWrap .collaborationMain .swiper-container .swiper-wrapper .swiper-slide .brandTxt{display: block; text-align: center; margin: 20px auto; font-size: 16px; font-weight: 700;}
-.section06.inner .collaborationWrap .collaborationMain .swiper-container .swiper-wrapper .swiper-slide .brandBtn {display:inline-block; text-align: center; padding:10px 30px; background: #000 ; color: #fff; margin-left: 42%;}
+.section06.inner .collaborationWrap .collaborationMain .swiper-container .swiper-wrapper .swiper-slide .brandBtn {display:inline-block; text-align: center; padding:10px 30px; background: #000 ; color: #fff; margin-left: 40%;}
 
 @media screen and (max-width:1024px) {
   .section06.inner .collaborationWrap .collaborationMain .swiper-container .swiper-wrapper .swiper-slide {width: 100%!important; text-align: center;}

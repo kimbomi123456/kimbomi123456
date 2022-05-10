@@ -267,6 +267,12 @@ $("footer .ftFamily .siteButton").click(function(){
       el: ".section06.inner .swiper-pagination",
       clickable: true,
     },
+    1023: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 0,
+      centeredSlides: true,
+  },
     navigation: {
       nextEl: ".section06.inner .swiper-button-next",
       prevEl: ".section06.inner .swiper-button-prev",

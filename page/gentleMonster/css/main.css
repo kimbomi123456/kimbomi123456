@@ -95,6 +95,8 @@ header .fullMenu.open .fullMenuWrap.inner {width: 980px; margin: 0 auto;}
 
 /* 모바일 댑스  메뉴*/
 .threeDepthMenu {display: none;}
+/* 모바일 메뉴 닫기 버튼 */
+.moblieMenuBtn {display: none;}
 
 header .fullMenu.open .oneItem {position: relative; display: block; height: 121px; line-height: 121px; font-size: 25px; font-weight: 300; color: rgb(0, 0, 0);}
 header .fullMenu.open .oneItem::after {content: ""; position: absolute; display: block; background: none repeat scroll 0 0 transparent; bottom: 0; height: 2px; left: 50%; background: darkblue; transition: width 0.3s ease 0s, left 0.3s ease 0s; width: 0;}
@@ -192,6 +194,9 @@ header .menu1 > .centerMenuInner > .centerMenuName> .centerItemClick:hover {colo
   /*햄버거 메뉴 클릭시 나오는  메뉴 */
   /* 햄버거 메뉴 클릭시 등장하는 풀메뉴 내 닫기 버튼 */
   header .close {top:10px; right: 10px;}
+  header .pcMenuBtn {display: none;}
+  header .moblieMenuBtn {display: block; width: 20px; height: 20px;}
+
   header .fullMenu.open .lineBottom {display: none;}
   /* pc 버전일 때 넓이 전체 덮는 메뉴 */
   header .fullMenu.open .fullMenuWrap.inner .ctaName {display: none;}
@@ -203,19 +208,19 @@ header .fullMenu.open .fullMenuWrap.inner {width: 100%; padding-top: 0;}
 header .fullMenu .fullMenuWrap.inner .threeDepthMenu {position: relative; width: 100%; display: block;}
 .threeDepthMenu > ul {display: block; width: 100%;}
 .threeDepthMenu > ul > li { display: block; width: 100%;}
-.threeDepthMenu > ul > li > a {display: block; padding: 14px 35px 14px 15px; color: inherit; font-size: 15px;background: url(../images/moPlus.gif) no-repeat right;}
+.threeDepthMenu > ul > li > a {display: block; padding: 14px 35px 14px 15px; color: inherit; font-size: 15px; }
 .threeDepthMenu > ul > li a:hover {color: #000;}
-.threeDepthMenu > ul > li.on > a {color: #000; background: #f5f2ec url(../images/moPlus.gif) no-repeat right;}
+.threeDepthMenu > ul > li.on > a {color: #000; background:#ddd;}
 .threeDepthMenu > ul > li ul {display: none;}
-.threeDepthMenu > ul > li > ul > li > a {display: block; padding: 14px 25px 14px 14px; font-size: 15px;
-  background: url(../images/moPlus.gif) no-repeat right;}
+.threeDepthMenu > ul > li > ul > li > a {display: block; padding: 14px 25px 14px 14px; font-size: 15px; background: url(../images/moPlus.png) no-repeat right; margin-right: 13px;}
 .threeDepthMenu > ul > li > ul > li > a {color: #000;}
-.threeDepthMenu > ul > li > ul > li.on a {color: #000; background: #f5f2ec url(../images/moPlus.gif) no-repeat right;}
+.threeDepthMenu > ul > li > ul > li.on a {color: #000; background: url(../images/moPlus.png)) no-repeat 10px; background-position:right; margin-right: 13px; border-bottom: 1px solid ##f5f2ec ;}
 .threeDepthMenu > ul > li > ul li ul {display: none; padding-bottom: 8px; background-color: #f5f2ec;}
 .threeDepthMenu > ul > li > ul li li a {display: block;padding: 10px 25px 10px 22px; color: #666; font-size: 15px;background-color: #f5f2ec;}
 .threeDepthMenu > ul > li > ul > li li a:hover {font-weight: 700;}
 
 .threeDepthMenu > ul li.noDepth a {background-image: none !important;}
+
 
   /* 상품 찾기 클릭시 등장하는 탭메뉴 */
   /* header .productSearchArea .productMenuInner .tab .list ul {} */

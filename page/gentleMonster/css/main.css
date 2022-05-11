@@ -208,13 +208,13 @@ header .fullMenu.open .fullMenuWrap.inner {width: 100%; padding-top: 0;}
 header .fullMenu .fullMenuWrap.inner .threeDepthMenu {position: relative; width: 100%; display: block;}
 .threeDepthMenu > ul {display: block; width: 100%;}
 .threeDepthMenu > ul > li { display: block; width: 100%;}
-.threeDepthMenu > ul > li > a {display: block; padding: 14px 35px 14px 15px; color: inherit; font-size: 15px; }
+.threeDepthMenu > ul > li > a {display: block; padding: 14px 35px 14px 15px; color: inherit; font-size: 15px;}
 .threeDepthMenu > ul > li a:hover {color: #000;}
 .threeDepthMenu > ul > li.on > a {color: #000; background:#ddd;}
 .threeDepthMenu > ul > li ul {display: none;}
-.threeDepthMenu > ul > li > ul > li > a {display: block; padding: 14px 25px 14px 14px; font-size: 15px; background: url(../images/moPlus.png) no-repeat right; margin-right: 13px;}
+.threeDepthMenu > ul > li > ul > li > a {display: block; padding: 14px 25px 14px 14px; font-size: 15px; background: url(../images/moPlus.png) no-repeat right; margin-right: 5px;}
 .threeDepthMenu > ul > li > ul > li > a {color: #000;}
-.threeDepthMenu > ul > li > ul > li.on a {color: #000; background: url(../images/moPlus.png)) no-repeat 10px; background-position:right; margin-right: 13px; border-bottom: 1px solid ##f5f2ec ;}
+.threeDepthMenu > ul > li > ul > li.on a {color: #000; background: url(../images/moPlus.png) no-repeat 10px; background-position:right; margin-right: 5px;}
 .threeDepthMenu > ul > li > ul li ul {display: none; padding-bottom: 8px; background-color: #f5f2ec;}
 .threeDepthMenu > ul > li > ul li li a {display: block;padding: 10px 25px 10px 22px; color: #666; font-size: 15px;background-color: #f5f2ec;}
 .threeDepthMenu > ul > li > ul > li li a:hover {font-weight: 700;}

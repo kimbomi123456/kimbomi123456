@@ -193,7 +193,7 @@ header .menu1 > .centerMenuInner > .centerMenuName> .centerItemClick:hover {colo
   header .fullMenu.open {left: 0; z-index: 11;}
   /*햄버거 메뉴 클릭시 나오는  메뉴 */
   /* 햄버거 메뉴 클릭시 등장하는 풀메뉴 내 닫기 버튼 */
-  header .close {top:10px; right: 10px;}
+  header .close {top:10px; right: 2px;}
   header .pcMenuBtn {display: none;}
   header .moblieMenuBtn {display: block; width: 20px; height: 20px;}
 
@@ -207,12 +207,12 @@ header .menu1 > .centerMenuInner > .centerMenuName> .centerItemClick:hover {colo
 header .fullMenu.open .fullMenuWrap.inner {width: 100%; padding-top: 0;}
 header .fullMenu .fullMenuWrap.inner .threeDepthMenu {position: relative; width: 100%; display: block;}
 .threeDepthMenu > ul {display: block; width: 100%;}
-.threeDepthMenu > ul > li { display: block; width: 100%;}
-.threeDepthMenu > ul > li > a {display: block; padding: 14px 35px 14px 15px; color: inherit; font-size: 15px;}
+.threeDepthMenu > ul > li { display: block; width: 100%; border-bottom: 1px solid #ddd;}
+.threeDepthMenu > ul > li > a {display: block; padding: 14px 35px 14px 15px; color: inherit; font-size: 15px; background: url(../images/moPlus.png) no-repeat right;}
 .threeDepthMenu > ul > li a:hover {color: #000;}
-.threeDepthMenu > ul > li.on > a {color: #000; background:#ddd;}
-.threeDepthMenu > ul > li ul {display: none;}
-.threeDepthMenu > ul > li > ul > li > a {display: block; padding: 14px 25px 14px 14px; font-size: 15px; background: url(../images/moPlus.png) no-repeat right; margin-right: 5px;}
+.threeDepthMenu > ul > li.on > a {color: #000; background-image: none;}
+.threeDepthMenu > ul > li ul {display: none; padding-left: 10px;}
+.threeDepthMenu > ul > li > ul > li > a {display: block; padding: 14px 25px 14px 14px; font-size: 15px; background: url(../images/moPlus.png) no-repeat right;}
 .threeDepthMenu > ul > li > ul > li > a {color: #000;}
 .threeDepthMenu > ul > li > ul > li.on a {color: #000; background: url(../images/moPlus.png) no-repeat 10px; background-position:right; margin-right: 5px;}
 .threeDepthMenu > ul > li > ul li ul {display: none; padding-bottom: 8px; background-color: #f5f2ec;}
